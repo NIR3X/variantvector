@@ -21,18 +21,18 @@ func Pack(variantVec Type) ([]uint8, error) {
 	packed = varsizedIntPack(packed, uint64(len(variantVec)))
 
 	for _, variant := range variantVec {
-		switch variant.(type) {
+		switch variant := variant.(type) {
 		case uint64:
 			packed = varsizedIntPack(packed, uint64(0))
-			packed = varsizedIntPack(packed, variant.(uint64))
+			packed = varsizedIntPack(packed, variant)
 		case string:
 			packed = varsizedIntPack(packed, uint64(1))
-			packed = varsizedIntPack(packed, uint64(len(variant.(string))))
-			packed = append(packed, []uint8(variant.(string))...)
+			packed = varsizedIntPack(packed, uint64(len(variant)))
+			packed = append(packed, []uint8(variant)...)
 		case []uint8:
 			packed = varsizedIntPack(packed, uint64(2))
-			packed = varsizedIntPack(packed, uint64(len(variant.([]uint8))))
-			packed = append(packed, variant.([]uint8)...)
+			packed = varsizedIntPack(packed, uint64(len(variant)))
+			packed = append(packed, variant...)
 		default:
 			return nil, fmt.Errorf("invalid variant type: %T", variant)
 		}
