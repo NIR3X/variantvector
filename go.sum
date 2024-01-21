@@ -1,2 +1,4 @@
 github.com/NIR3X/varsizedint v0.0.0-20240120165247-1744a5ee7fb9 h1:G4BFNdnTAuVvoiM7+9lqLfY0y/W1iMkgODcLqPzSdSc=
 github.com/NIR3X/varsizedint v0.0.0-20240120165247-1744a5ee7fb9/go.mod h1:TusGrG0B8EExPM6Tz8swOtJE+f6McIf4tPY5kDKYBEU=
+github.com/NIR3X/varsizedint v0.0.0-20240121080817-441eede8d8cd h1:YHkY8AkQ/mzCGMLb5KlAxvvoKbWsx1BNrDIct0W/zFc=
+github.com/NIR3X/varsizedint v0.0.0-20240121080817-441eede8d8cd/go.mod h1:TusGrG0B8EExPM6Tz8swOtJE+f6McIf4tPY5kDKYBEU=
