@@ -41,7 +41,7 @@ func Pack(variantVec Type) ([]uint8, error) {
 	return packed, nil
 }
 
-func varsizedIntUnpack(data []byte, offset uint64) (uint64, uint64, error) {
+func varsizedIntUnpack(data []uint8, offset uint64) (uint64, uint64, error) {
 	if uint64(len(data)) < offset+1 {
 		return 0, 0, errors.New("insufficient data")
 	}
